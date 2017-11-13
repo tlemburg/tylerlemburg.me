@@ -1,7 +1,7 @@
 require 'active_record'
 
 if ENV['RACK_ENV'] == 'production'
-  ActiveRecord::Base.establish_connection(ENV['CLEARDB_DATABASE_URL'].sub('mysql://', 'mysql2L//'))
+  ActiveRecord::Base.establish_connection(ENV['CLEARDB_DATABASE_URL'].sub('mysql://', 'mysql2://'))
 else
   ActiveRecord::Base.establish_connection({
       :adapter => CONFIG["db"]["adapter"],
