@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/main.css">
+    <title>Tyler Lemburg</title>
+    <script src="https://use.fontawesome.com/ed5b5fdebe.js"></script>
+  </head>
+  <% body_class ||= '' %>
+  <body class="<%= body_class %>">
+    <div id="menu" class="menu">
+      <div class="left-bar">&nbsp;</div>
+      <div class="top-bar">
+      <div id="close-link" class="menu-container green">
+        <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+      </div>
+      </div>
+      <ul>
+        <% unless body_class == 'home' %><li><a href="/">TL.com</a></li><% end %>
+        <li><a href="/academic/">Academic</a></li>
+        <li><a href="/bio/">Bio</a></li>
+        <li><a href="/cv.pdf">CV</a></li>
+        <li><a href="https://www.linkedin.com/in/tylerlemburg">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div class="top-bar">
+      <div id="open-link" class="menu-container <%= 'green' unless body_class == 'home' %>">
+        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <%= yield %>
+    <script type="text/javascript">
+    document.getElementById("open-link").addEventListener("click", function () {
+      var element = document.getElementById("menu");
+      element.className = 'menu open';
+    });
+    document.getElementById("close-link").addEventListener("click", function () {
+      var element = document.getElementById("menu");
+      element.className = 'menu';
+    });
+    </script>
+  </body>
+</html>
+    

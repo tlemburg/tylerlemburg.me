@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Tyler Lemburg</title>
+    <script src="https://use.fontawesome.com/ed5b5fdebe.js"></script>
+    <style>
+      @font-face {
+        font-family: "GothamBold";
+        src: url(/Gotham-Bold.otf);
+      }
+      @font-face {
+        font-family: "GothamBook";
+        src: url(/Gotham-Book.otf);
+      }
+      @font-face {
+        font-family: "ForzaBoldItalic";
+        src: url(/Forza-BoldItalic.otf);
+      }
+      @font-face {
+        font-family: "ForzaBold";
+        src: url(/Forza-Bold.otf);
+      }
+      @font-face {
+        font-family: "ChronicleRoman";
+        src: url(/ChronicleTextG1-Roman-Pro.otf);
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        color: #030303;
+        background: #FAFDFA;
+        overflow-x: hidden;
+      }
+
+      h1 {
+        font-family: "ForzaBoldItalic";
+        font-size: 3em;
+        margin-top: 0;
+      }
+
+      h2, h3 {
+        font-family: "ForzaBold";
+      }
+
+      .top-bar {
+        padding: 0.5em;
+      }
+
+      .menu-container {
+        float: right;
+        z-index: 1;
+      }
+
+      .menu-container a {
+        height: 1em;
+        width: 1em;
+        border-radius: 1.1em;
+        background: #FEFEFE;
+        display: block;
+        padding: 0.5em;
+        text-align: center;
+      }
+
+      .menu-container.green a {
+        background: #3d5a4c;
+      }
+
+      .menu-container a i {
+        font-size: 1.1em;
+        color: #3d5a4c;
+      }
+
+      .menu-container.green a i {
+        color: #FEFEFE;
+      }
+
+      h1 .subhead, h2 .subhead, h3 .subhead {
+        display: block;
+        font-family: "GothamBook";
+        text-transform: uppercase;
+        color: #555;
+        font-size: 0.5em;
+      }
+
+      #menu {
+        position: absolute;
+        height: 100%;
+        width: 12em;
+        top: 0;
+        right: -12em;
+        -webkit-transition: right 0.5s;
+        transition: right 0.5s;
+        background: #FEFEFE;
+      }
+      #menu.open {
+        right: 0;
+      }
+
+      #menu ul {
+        list-style:none;
+        padding: 0;
+        margin: 0;
+        margin-top: 3em;
+        text-align: center;
+        font-family: "GothamBold";
+        text-transform: uppercase;
+      }
+
+      #menu ul li {
+        margin-bottom: 1em;
+      }
+
+      #menu ul li a {
+        color: #3d5a4c;
+        text-decoration: none;
+        padding-bottom: 0.25em;
+        cursor: pointer;
+      }
+
+      #menu ul li a:hover {
+        border-bottom: 2px solid #3d5a4c;
+      }
+
+      .main-content {
+        padding: 2em;
+        margin: 0 auto;
+        width: 5000em;
+        max-width: 50%;
+      }
+
+      .post {
+        font-family: "ChronicleRoman";
+      }
+
+      .post img {
+        width: 40%;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-content">
+      <h1>Tyler's Blog <span class="subhead">Pardon me, while I burst</span></h1>
+
+      <% posts.each do |post| %>
+      <div class="post">
+        <h2><%= post.title %> <span class="subhead"><%= post.posted_date.strftime('%m/%d/%Y') %></span></h2>
+        <div class="text">
+        <%= post.html_text %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+    <script type="text/javascript">
+    document.getElementById("open-link").addEventListener("click", function () {
+      var element = document.getElementById("menu");
+      element.className = 'menu open';
+    });
+    document.getElementById("close-link").addEventListener("click", function () {
+      var element = document.getElementById("menu");
+      element.className = 'menu';
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<div class="main-content">
+<h1><%= post.nil? ? "New Blog Post" : "Edit Blog Post: #{post.title}" %></h1>
+
+<form action="" method="POST">
+<label for="title">Title</label>
+<input type="text" name="title" id="title">
+<br><br>
+<label for="html-text">HTML Text</label>
+<textarea id="html-text" name="html_text"></textarea>
+<br><br>
+<button type="submit">Submit</button>
+</form>
+</div>

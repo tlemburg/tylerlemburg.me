@@ -1,0 +1,27 @@
+<div style="padding: 2em;">
+  <h1>Blog Admin</h1>
+
+  <h2><a href="/admin/blog/new/">New Post</a></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>HTML_Text</th>
+        <th>Posted_Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% posts.each do |post| %>
+      <tr>
+        <td><a href="/admin/blog/edit/<%= post.id %>/"><%= post.id %></a></td>
+        <td><%= post.title %></td>
+        <td><%= post.html_text.first(100) %>...</td>
+        <td><%= post.posted_date.strftime("%m/%d/%Y") %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

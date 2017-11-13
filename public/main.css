@@ -1,0 +1,309 @@
+@font-face {
+  font-family: "ForzaBoldItalic";
+  src: url(/Forza-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "ForzaBold";
+  src: url(/Forza-Bold.otf);
+}
+
+@font-face {
+  font-family: "GothamNarrowBoldItalic";
+  src: url(/GothamNarrow-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "GothamNarrowBookItalic";
+  src: url(/GothamNarrow-BookItalic.otf);
+}
+
+@font-face {
+  font-family: "GothamNarrowBook";
+  src: url(/GothamNarrow-Book.otf);
+}
+
+
+@font-face {
+  font-family: "GothamBook";
+  src: url(/Gotham-Book.otf);
+}
+
+@font-face {
+  font-family: "GothamBold";
+  src: url(/Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: "ChronicleRoman";
+  src: url(/ChronicleTextG1-Roman-Pro.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #030303;
+  background: #FAFDFA;
+  overflow-x: hidden;
+}
+
+body.home {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+55,0+100 */
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.80) 45%, rgba(0,0,0,0) 100%), url(/main_bg.JPG);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.home a {
+  color: #34c57f;
+  text-decoration: underline;
+}
+
+.top-bar {
+  padding: 0.5em;
+}
+
+h1 {
+  font-family: "ForzaBoldItalic";
+  font-size: 3em;
+  margin-top: 0;
+}
+h1 .subhead {
+  display: block;
+  font-family: "GothamBook";
+  text-transform: uppercase;
+  color: #555;
+  font-size: 0.5em;
+  text-shadow: none;
+}
+
+h1.super {
+  font-family: "ForzaBoldItalic";
+  font-size: 4em;
+  text-shadow: 2px 2px #3d5a4c;
+  color: #FEFEFE;
+  margin-top: 0;
+}
+
+h2, h3 {
+  font-family: "ForzaBold";
+}
+
+table {
+  font-family: "GothamNarrowBook";
+}
+
+.menu-container {
+  float: right;
+  z-index: 1;
+}
+
+.menu-container a {
+  height: 1em;
+  width: 1em;
+  border-radius: 1.1em;
+  background: #FEFEFE;
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.menu-container.green a {
+  background: #3d5a4c;
+}
+
+.menu-container a i {
+  font-size: 1.1em;
+  color: #3d5a4c;
+}
+
+.menu-container.green a i {
+  color: #FEFEFE;
+}
+
+.main-content {
+  padding: 2em;
+}
+
+.main-container {
+  width: 50%;
+  padding: 1em;
+  padding-left: 2em;
+}
+.activities {
+  font-family: "GothamBook";
+  color: #FEFEFE;
+}
+.activities ul {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  margin-top: 1em;
+  padding: 0;
+}
+.activities li {
+  margin-bottom: 0.8em;
+}
+#hat {
+  height: 4em;
+  vertical-align: middle;
+}
+#menu {
+  position: absolute;
+  height: 100%;
+  width: 12em;
+  top: 0;
+  right: -12em;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+  background: #FEFEFE;
+}
+
+#menu .left-bar {
+  left: 0;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  background: #3d5a4c;
+  position: absolute;
+}
+#menu.open {
+  right: 0;
+}
+
+#menu ul {
+  list-style:none;
+  padding: 0;
+  margin: 0;
+  margin-top: 3em;
+  text-align: center;
+  font-family: "GothamBold";
+  text-transform: uppercase;
+}
+
+#menu ul li {
+  margin-bottom: 1em;
+}
+
+#menu ul li a {
+  color: #3d5a4c;
+  text-decoration: none;
+  padding-bottom: 0.25em;
+  cursor: pointer;
+}
+
+#menu ul li a:hover {
+  border-bottom: 2px solid #3d5a4c;
+}
+
+.inline-image {
+  float: right;
+  max-width: 30%;
+  text-align: center;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em 0.5em 0;
+  border: 1px solid gray;
+}
+
+.inline-image.left {
+  float: left;
+  margin-left: 0;
+  margin-right: 1em;
+}
+
+.inline-image img {
+  width: 95%;
+}
+
+.caption {
+  text-align: center;
+  font-family: "GothamBook";
+  font-size: 0.75em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.bio p {
+  font-family: "ChronicleRoman";
+  letter-spacing: 0.03em;
+  line-height: 1.2em;
+}
+
+body.academic {
+  background: #FAFDFA;
+}
+
+.academic h1, .academic h2, .academic h3 {
+  font-family: "ForzaBold";
+}
+
+.academic h1 .subhead, .academic h2 .subhead, .academic h3 .subhead {
+  display: block;
+  font-family: "GothamBook";
+  text-transform: uppercase;
+  color: #555;
+  font-size: 0.8em;
+}
+
+.academic ul, .academic p {
+  font-family: "GothamNarrowBook";
+}
+
+.academic .image {
+  width: 20%;
+  float: right;
+}
+.academic .image img {
+  width: 100%;
+}
+.academic .indent {
+  padding-left: 2em;
+}
+
+.academic .main-content {
+  padding: 2em;
+}
+
+.blog .main-content {
+  padding: 2em;
+  margin: 0 auto;
+  width: 5000em;
+  max-width: 50%;
+}
+
+.blog .post {
+  font-family: "ChronicleRoman";
+}
+
+.blog .post img {
+  width: 40%;
+  float: right;
+}
+
+form label {
+  font-family: "GothamNarrowBoldItalic";
+  vertical-align: top;
+}
+
+form input {
+  width: 50%;
+}
+
+form textarea {
+  height: 10em;
+  width: 50%;
+}
+
+form button {
+  background: #3d5a4c;
+  color: white;
+  font-family: "GothamBold";
+  border-radius: 0.2em;
+  padding: 0.8em;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
