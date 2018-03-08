@@ -20,6 +20,12 @@ class Public < Sinatra::Base
     erb :bio
   end
 
+  get '/portfolio/?' do
+    erb :portfolio, :locals => {
+      body_class: 'portfolio'
+    }
+  end
+
   get '/blog/?' do
     erb :blog, locals: {
       posts: BlogPost.order(:id => :desc).all,
@@ -61,7 +67,7 @@ class Protected < Sinatra::Base
 
   post '/blog/edit/:id/?' do
     BlogPost.find(params[:id]).update(params.merge(posted_date: Time.now))
-    redirect back
+    redirect '/admin/blog/'
   end
 
   post '/blog/delete/:id/?' do

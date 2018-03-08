@@ -3,7 +3,7 @@
 
   <h2><a href="/admin/blog/new/">New Post</a></h2>
 
-  <table>
+  <table class="greyGridTable">
     <thead>
       <tr>
         <th>ID</th>
@@ -17,7 +17,7 @@
       <tr>
         <td><a href="/admin/blog/edit/<%= post.id %>/"><%= post.id %></a></td>
         <td><%= post.title %></td>
-        <td><%= post.html_text.first(100) %>...</td>
+        <td><%= post.html_text.first(100) %><%='...' if post.html_text.length > 100 %></td>
         <td><%= post.posted_date.strftime("%m/%d/%Y") %></td>
       </tr>
       <% end %>

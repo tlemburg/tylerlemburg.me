@@ -70,7 +70,7 @@ h1 {
   font-size: 3em;
   margin-top: 0;
 }
-h1 .subhead {
+h1 .subhead, h2 .subhead, h3 .subhead {
   display: block;
   font-family: "GothamBook";
   text-transform: uppercase;
@@ -208,6 +208,14 @@ table {
   border: 1px solid gray;
 }
 
+.inline-image.no-caption {
+  padding-bottom: 0.5em;
+}
+
+.inline-image.much-smaller {
+  max-width: 10%;
+}
+
 .inline-image.left {
   float: left;
   margin-left: 0;
@@ -216,6 +224,10 @@ table {
 
 .inline-image img {
   width: 95%;
+}
+
+.portfolio .inline-image {
+  border: 1px solid #080808;
 }
 
 .caption {
@@ -283,6 +295,10 @@ body.academic {
   float: right;
 }
 
+.portfolio h2 {
+  margin-top: 0;
+}
+
 form label {
   font-family: "GothamNarrowBoldItalic";
   vertical-align: top;
@@ -306,4 +322,58 @@ form button {
   border: 0;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+table.greyGridTable {
+  border: 2px solid #FFFFFF;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.greyGridTable td, table.greyGridTable th {
+  border: 1px solid #FFFFFF;
+  padding: 3px 4px;
+}
+table.greyGridTable tbody td {
+  font-size: 13px;
+}
+table.greyGridTable td:nth-child(even) {
+  background: #EBEBEB;
+}
+table.greyGridTable thead {
+  background: #FFFFFF;
+  border-bottom: 4px solid #333333;
+}
+table.greyGridTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  border-left: 2px solid #333333;
+}
+table.greyGridTable thead th:first-child {
+  border-left: none;
+}
+
+table.greyGridTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  border-top: 4px solid #333333;
+}
+table.greyGridTable tfoot td {
+  font-size: 14px;
+}
+
+.band {
+  clear: both;
+  border-top: 2px solid #010F01;
+}
+
+.band.green {
+  background: linear-gradient(to bottom, rgba(35,102,20,0.75) 0%,rgba(125,185,232,0) 100%); 
+}
+
+.band.red {
+  background: linear-gradient(to bottom, rgba(208,0,0,0.75) 0%,rgba(125,185,232,0) 100%); 
 }
