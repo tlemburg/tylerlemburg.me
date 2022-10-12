@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.4.0'
+ruby '3.0.2'
 
 gem 'sinatra'
 gem 'unicorn'
