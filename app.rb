@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/base'
 require 'bcrypt'
-require 'models/blog_post'
+require_relative './models/blog_post'
 
 class Public < Sinatra::Base
   get '/' do
